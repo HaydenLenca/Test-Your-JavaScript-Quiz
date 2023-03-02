@@ -47,6 +47,16 @@ body {
     text-align: center;
 }
 
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+ul li {
+    font-size: 25px;
+    margin: 20px;
+}
+
 label {
     color: #000;
 }
@@ -64,7 +74,7 @@ input {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 5px;
     float: right;
-    margin-top: 45%;
+    margin-top: 20%;
     padding: 10px;
 }
 
