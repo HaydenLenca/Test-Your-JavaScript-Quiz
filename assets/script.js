@@ -3,57 +3,67 @@
 
 const quizData = [
     {
-        question: 'which languace',
-        a: 'java',
-        b: 'CSS',
-        c: 'html',
-        d: 'Pyython',
-        correct: 'a',
+        question: 'which languace safd a',
+          a: 'java',
+          b: 'CSS',
+          c: 'html',
+          d: 'Pyython',
+        
+        correctAnswer: "a"
     },
     {
         question: 'what is a boolean',
-        a: 'dont know',
-        b: 'i know',
-        c: 'we know',
-        d: 'true',
-        correct: 'b',
+          a: 'dont know',
+          b: 'i know',
+          c: 'we know',
+          d: 'true',
+
+          correctAnswer: "b"
     },
     {
         question: 'what is a boolean',
-        a: 'dont know',
-        b: 'i know',
-        c: 'we know',
-        d: 'true',
-        correct: 'c',
+
+          a: 'dont know',
+          b: 'i know',
+          c: 'we know',
+          d: 'true',
+    
+          correctAnswer: "c"
     },
     {
         question: 'what is a boolean',
-        a: 'dont know',
-        b: 'i know',
-        c: 'we know',
-        d: 'true',
-        correct: 'd',
+          a: 'dont know',
+          b: 'i know',
+          c: 'we know',
+          d: 'true',
+    
+          correctAnswer: "d"
     },
 
 ];
 
-const quiz = document.getElementById('#quiz');
+console.log(quizData);
+
+
+
+const quiz = document.getElementById('quiz');
 const answerEls = document.querySelector('.answer'); 
 const questionEl = document.getElementById('question');
-const a_text = document.getElementById('#a_text');
-const b_text = document.getElementById('#b_text');
-const c_text = document.getElementById('#c_text');
-const d_text = document.getElementById('#d_text');
-const submitBtn = document.getElementById('#submit');
+const a_text = document.getElementById('a_text');
+const b_text = document.getElementById('b_text');
+const c_text = document.getElementById('c_text');
+const d_text = document.getElementById('d_text');
+const submitBtn = document.getElementById('submit');
+console.log(a_text);
+
 
 let currentQuiz = 0
-let score =0 
+let score = 0 
 
-laodQuiz()
+function loadQuiz() {
+    
 
-function laodQuiz() {
-
-    deselectAnswer()
+    // deselectAnswer()
 
     const currentQuizData = quizData[currentQuiz]
 
@@ -63,18 +73,26 @@ function laodQuiz() {
     c_text.innerHTML = currentQuizData.c
     d_text.innerHTML = currentQuizData.d
 }
+console.log(loadQuiz);
+console.log(answerEls);
 
-function deselectAnswer() {
-    answerEls.forEach(answerEl => answerEl.checked = false)
-}
+
+
+loadQuiz()
+
+// function deselectAnswer() {
+//     answerEls.forEach(answerEls => answerEl.checked = false)
+// }
 
 function getSelected() {
     let answerEls 
-    answerEls.forEach(answerEl => {
-        if(answerEl.checked) {
-            answerEl = answerEl.id
+     answerEls.forEach((answerEl) => {
+        if(radio.checked) {
+            answerEls = answerEls.id
         }
-    })
+
+        console.log(answerEls);
+});
     return answer 
 }
 
@@ -89,12 +107,12 @@ submitBtn.addEventListener('click', () => {
 
         if(currentQuiz < quizData.length) {
             laodQuiz()
-        // } else {
+        } //else {
         //     quiz.innerHTML = 
         //     <h2>You answered ${score}/${quizData.lengt} questions correctly<h2>
             
         //     <button onclick="location.reload()">
                
-        }
+        // }
     }
 })
