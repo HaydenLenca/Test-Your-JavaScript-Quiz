@@ -4,31 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
-    <title>Test Your JavaScript</title>
+    <title>JS Code Quiz</title>
 </head>
 <body>
-   <main class="quiz">
-    <header>
-        <h1 class="score">View The High Score</h1>
-        <h2 class="time">Time Left: 0</h2>
-    </header>
-    <div class="card">
-        <div class="cardHeader">
-            <h2 class="cardLabel">JavaScript Quiz</h2>
-        </div>
-        <div class="cardBody">
-            <p id="p1">Answer all questions to see how much you know!</p>
-            <p id="p2">CAUTION wrong answers will deduct time from the timer!</p>
-        </div>
-        <footer class="footer">
-            <button id="start" class="btn">Start Quiz</button>
-        </footer>
+
+    <button id="start">start</button>
+    <div id="score"></div>
+    <div id="time"></div>
+    <div id="questions"></div>
+    <div id="check"></div>
+    <div id="GameOver"></div>
+    <div id="highscores">
+        <form id="names">
+           <input type="text" placeholder="Enter name for bragging!" id="namefield">
+           <button id="submit">Submit</button> 
+        </form>
     </div>
-   </main>
+    <div id="allscores"></div>
+     
 
-    <script src="./assets/script.js"></script>
-
-    
 </body>
+
+<script src="./assets/script.js"></script>
 </html>
